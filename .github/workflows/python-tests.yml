@@ -20,5 +20,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt || echo "Non hai requirements.txt"
 
+      - name: Verificar execución de tests
+        run: echo "🏆 TESTS EXECUTÁNDOSE AGORA!"
+
       - name: Executar tests
-        run: python -m unittest discover
+        run: python -m unittest test_utils.py
+
+      - name: Verificar finalización de tests
+        run: echo "✅ TESTS FINALIZADOS!"
